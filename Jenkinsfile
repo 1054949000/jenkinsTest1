@@ -12,7 +12,7 @@ node {
 
     stage("Pull GIT Repo") {
         // checkout scm
-        echo "pull repo"
+        echo "pull repo1"
         dir('webrtc') {
             git branch: 'main',
                 url: 'https://github.com/1054949000/jenkinsTest1.git';
