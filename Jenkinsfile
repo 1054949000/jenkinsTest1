@@ -5,13 +5,13 @@ node {
     def build_arg = ""
     def registry_address = "https://registry.hub.docker.com"
 
-    stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
+    // stage('Initialize'){
+    //     def dockerHome = tool 'myDocker'
+    //     env.PATH = "${dockerHome}/bin:${env.PATH}"
+    // }
 
     stage("Pull GIT Repo") {
-        checkout scm
+        // checkout scm
         echo "pull repo"
         // dir('webrtc') {
         //     git branch: 'main',
