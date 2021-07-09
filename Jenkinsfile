@@ -13,13 +13,12 @@ node {
     stage("Pull GIT Repo") {
         // checkout scm
         echo "pull repo"
-        // dir('webrtc') {
-        //     git branch: 'main',
-        //         credentialsId: 'my_jenkins_private',
-        //         url: 'git@github.com:sidgeek/webRTC.git';
-        //     // ARES-1285 Create a version file in jenkins pipeline
-        //     rev_no = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
-        // }
+        dir('webrtc') {
+            git branch: 'main',
+                url: 'https://github.com/1054949000/jenkinsTest1.git';
+            // ARES-1285 Create a version file in jenkins pipeline
+            rev_no = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
+        }
     }
 
     stage("Build and start test image") {
