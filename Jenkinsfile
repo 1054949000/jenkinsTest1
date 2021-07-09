@@ -35,7 +35,7 @@ node {
         // }
     }
     stage('deploy image on machinice') {
-        echo "deploy1"
+        echo "deploy2"
         // sh 'docker stop mydemo || docker rm -f mydemo || true'
         // sh 'docker run -p 443:443 -p 80:80 -d --rm --name mydemo sidshi/testdemo'
     }
